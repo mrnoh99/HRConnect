@@ -14,6 +14,11 @@ struct ContentView: View {
                     .font(.subheadline)
                     .tint(Theme.green)
                     .padding(.horizontal, 4)
+                Text("화면이 꺼지거나 다른 앱을 써도 정지할 때까지 중계는 계속됩니다. 앱을 위로 밀어 종료하지만 마세요.")
+                    .font(.footnote)
+                    .foregroundStyle(Theme.label)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal, 4)
             }
             .padding(.horizontal, 16)
             .padding(.bottom, 24)

@@ -2,23 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CFBundleDisplayName</key>
-	<string>HRConnect</string>
-	<key>NSBluetoothAlwaysUsageDescription</key>
-	<string>애플워치에서 받은 심박을 주변 기기(다른 아이폰의 BikeCom 등)가 받을 수 있도록 BLE 심박 센서로 광고합니다.</string>
-	<key>NSHealthShareUsageDescription</key>
-	<string>애플워치의 심박 측정을 시작합니다.</string>
-	<key>NSHealthUpdateUsageDescription</key>
-	<string>애플워치의 심박 측정(워크아웃 세션)을 시작합니다.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>bluetooth-peripheral</string>
 	</array>
 	<key>UILaunchScreen</key>
 	<dict/>
-	<key>UISupportedInterfaceOrientations</key>
-	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-	</array>
 </dict>
 </plist>

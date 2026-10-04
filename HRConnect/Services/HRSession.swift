@@ -4,7 +4,12 @@ import UIKit
 
 /// 심박 중계의 중심. 페어링된 워치(`WatchLink`)에서 받은 심박을 화면에 표시하고,
 /// `HeartRateBroadcaster` 로 다시 광고한다(다른 아이폰의 BikeCom 이 심박 센서로 수신).
+///
+/// 화면이 꺼져(앱이 백그라운드로 가) 있어도 정지할 때까지 계속 동작한다: 워치가 1초마다 보내는
+/// `WCSession` 메시지가 앱을 깨우고, 그때마다 `bluetooth-peripheral` 백그라운드 모드로 notify 한다.
 final class HRSession: ObservableObject {
+    static let shared = HRSession()
+
     let watch = WatchLink()
     let broadcaster = HeartRateBroadcaster()
 
@@ -30,9 +35,9 @@ final class HRSession: ObservableObject {
 
     private var cancellables: Set<AnyCancellable> = []
 
-    init() {
+    private init() {
         let defaults = UserDefaults.standard
-        defaults.register(defaults: [Keys.broadcast: true, Keys.keepScreenOn: true])
+        defaults.register(defaults: [Keys.broadcast: true, Keys.keepScreenOn: false])
         broadcastEnabled = defaults.bool(forKey: Keys.broadcast)
         keepScreenOn = defaults.bool(forKey: Keys.keepScreenOn)
 
@@ -61,7 +66,7 @@ final class HRSession: ObservableObject {
         }
     }
 
-    /// 심박이 들어오는 동안 화면이 꺼지지 않게 한다(포그라운드에서 광고가 가장 안정적이다).
+    /// 선택 사항: 심박이 들어오는 동안 화면이 꺼지지 않게 한다(심박을 계속 보고 싶을 때).
     private func applyIdleTimer() {
         UIApplication.shared.isIdleTimerDisabled = keepScreenOn && bpm > 0
     }

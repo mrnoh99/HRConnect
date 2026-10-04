@@ -296,6 +296,11 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Config/HRConnect.entitlements;
 				INFOPLIST_FILE = "Config/HRConnect-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = HRConnect;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "애플워치에서 받은 심박을 주변 기기(다른 아이폰의 BikeCom 등)가 받을 수 있도록 BLE 심박 센서로 광고합니다.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "애플워치의 심박 측정을 시작합니다.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "애플워치의 심박 측정(워크아웃 세션)을 시작합니다.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -312,6 +317,11 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Config/HRConnect.entitlements;
 				INFOPLIST_FILE = "Config/HRConnect-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = HRConnect;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "애플워치에서 받은 심박을 주변 기기(다른 아이폰의 BikeCom 등)가 받을 수 있도록 BLE 심박 센서로 광고합니다.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "애플워치의 심박 측정을 시작합니다.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "애플워치의 심박 측정(워크아웃 세션)을 시작합니다.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

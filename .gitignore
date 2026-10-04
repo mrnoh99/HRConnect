@@ -1,0 +1,9 @@
+# Xcode — HRConnect.xcodeproj 는 커밋한다. 사용자별 상태만 무시.
+*.xcworkspace/
+xcuserdata/
+DerivedData/
+build/
+*.xcuserstate
+
+# macOS
+.DS_Store

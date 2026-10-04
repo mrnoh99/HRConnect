@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDisplayName</key>
+	<string>HRConnect</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>심박을 측정해 아이폰으로 전송합니다.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>심박 측정을 위해 워크아웃 세션을 사용합니다(기록은 저장하지 않습니다).</string>
+	<key>WKApplication</key>
+	<true/>
+	<key>WKBackgroundModes</key>
+	<array>
+		<string>workout-processing</string>
+	</array>
+	<key>WKCompanionAppBundleIdentifier</key>
+	<string>com.jaisungnoh.hrconnect</string>
+	<key>WKRunsIndependentlyOfCompanionApp</key>
+	<false/>
+</dict>
+</plist>
